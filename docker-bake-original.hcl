@@ -10,7 +10,7 @@ target "oci-labels" {
   labels = {
     "org.opencontainers.image.description" = "Kroki provides a unified API supporting multiple diagramming formats, making it easy to create diagrams from textual descriptions."
     "org.opencontainers.image.url" = "https://kroki.io"
-    "org.opencontainers.image.source" = "https://github.com/nequam/kroki"
+    "org.opencontainers.image.source" = "https://github.com/yuzutech/kroki"
     "org.opencontainers.image.licenses" = "MIT"
   }
 }
@@ -26,7 +26,7 @@ target "kroki" {
     tikz = "./tikz"
   }
   dockerfile = "ops/docker/jdk17-jammy/Dockerfile"
-  tags = ["registry.nequam.us/kroki:${TAG}"]
+  tags = ["yuzutech/kroki:${TAG}"]
   inherits = ["oci-labels"]
   labels = {
     "org.opencontainers.image.title" = "Kroki"
@@ -35,7 +35,7 @@ target "kroki" {
 
 target "kroki-mermaid" {
   context = "mermaid"
-  tags = ["registry.nequam.us/kroki-mermaid:${TAG}"]
+  tags = ["yuzutech/kroki-mermaid:${TAG}"]
   inherits = ["oci-labels"]
   labels = {
     "org.opencontainers.image.title" = "Kroki - Mermaid"
@@ -44,7 +44,7 @@ target "kroki-mermaid" {
 
 target "kroki-bpmn" {
   context = "bpmn"
-  tags = ["registry.nequam.us/kroki-bpmn:${TAG}"]
+  tags = ["yuzutech/kroki-bpmn:${TAG}"]
   inherits = ["oci-labels"]
   labels = {
     "org.opencontainers.image.title" = "Kroki - BPMN"
@@ -53,7 +53,7 @@ target "kroki-bpmn" {
 
 target "kroki-excalidraw" {
   context = "excalidraw"
-  tags = ["registry.nequam.us/kroki-excalidraw:${TAG}"]
+  tags = ["yuzutech/kroki-excalidraw:${TAG}"]
   inherits = ["oci-labels"]
   labels = {
     "org.opencontainers.image.title" = "Kroki - Excalidraw"
@@ -62,7 +62,7 @@ target "kroki-excalidraw" {
 
 target "kroki-diagramsnet" {
   context = "diagrams.net"
-  tags = ["registry.nequam.us/kroki-diagramsnet:${TAG}"]
+  tags = ["yuzutech/kroki-diagramsnet:${TAG}"]
   inherits = ["oci-labels"]
   labels = {
     "org.opencontainers.image.title" = "Kroki - diagrams.net"
